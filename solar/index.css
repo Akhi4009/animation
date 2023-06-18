@@ -4,6 +4,9 @@ position: absolute;
 width: 100%;
 }
 
+h1{
+    text-align: center;
+}
 
 .sun {
     width: 100px;
