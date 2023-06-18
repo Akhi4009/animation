@@ -1,0 +1,63 @@
+body {
+height: 100vh;
+position: absolute;
+width: 100%;
+}
+
+
+.sun {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    border-radius: 50%;
+    top:calc(50% - 100px/2);
+    left:calc(50% - 100px/2);
+    position: absolute;
+}
+.mercury {
+    --moveX:200px;
+    width: 20px;
+    height: 20px;
+    background-color: gray;
+    border-radius: 50%;
+    top:calc(50% - 20px/2);
+    left:calc(50% - 20px/2);
+    position: absolute;
+    transform: translate(100px);
+    animation: solarsystem 2s infinite linear;
+}
+.venus {
+    --moveX:100px;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    border-radius: 50%;
+    top:calc(50% - 30px/2);
+    left:calc(50% - 30px/2);
+    position: absolute;
+    transform: translate(200px);
+    animation: solarsystem 3s infinite linear;
+}
+
+.earth {
+    --moveX:150px;
+    width: 50px;
+    height: 50px;
+    background-color:blue;
+    border-radius: 50%;
+    top:calc(50% - 50px/2);
+    left:calc(50% - 50px/2);
+    position: absolute;
+    transform: translate(150px);
+    animation: solarsystem 4s infinite linear;
+}
+
+
+@keyframes solarsystem {
+    from{
+        transform: rotate(0deg) translate(var(--moveX));
+    }
+    to{
+        transform: rotate(360deg) translate(var(--moveX));
+    }
+}
